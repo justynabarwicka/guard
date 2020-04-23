@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d1f3fd;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    /* color: #fff; */
+}
+
+div.logo {
+    text-align: center;
+    height: 30vh;
+    margin-bottom: 2vh;
+}
+
+@media (min-width: 1500px) {
+    div.logo {
+        margin-bottom: 3vh;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+    div.logo {
+        margin-bottom: 10vh;
+    }
+}
+
+@media (max-width: 768px) {
+    div.logo {
+        margin-bottom: 3vh;
+    }
+}
+
+img.logo {
+    height: 90%;
+    margin-top: 2.5vh;
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+    img.logo {
+        margin-top: 4.5vh;
+    }
+}
+
+@media (max-width: 768px) {
+    img.logo {
+        margin-top: 2.5vh;
+    }
+}
+
+section.forms {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1240px;
+}
+
+.formInContainer,
+.formOutContainer {
+    flex-basis: 30%;
+    text-align: center;
+}
+
+@media (min-width: 1500px) {
+
+    .formInContainer,
+    .formOutContainer {
+        flex-basis: 40%;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+
+    .formInContainer,
+    .formOutContainer {
+        flex-basis: 65%;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+    .formOutContainer {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .formInContainer,
+    .formOutContainer {
+        flex-basis: 85%;
+    }
+}
+
+input {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    outline: none;
+}
+
+@media (min-width: 1500px) {
+    input {
+        height: 55px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+    input {
+        height: 85px;
+        margin-bottom: 40px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    input {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 425px) {
+    input {
+        height: 55px;
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    input {
+        height: 40px;
+        margin-bottom: 15px;
+        font-size: 10px;
+    }
+}
+
+.inputIcon,
+.outputIcon {
+    position: relative;
+}
+
+.inputIcon i,
+.outputIcon i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 45px;
+    font-size: 25px;
+    width: 15%;
+}
+
+@media (min-width: 1500px) {
+
+    .inputIcon i,
+    .outputIcon i {
+        line-height: 55px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+
+    .inputIcon i,
+    .outputIcon i {
+        line-height: 85px;
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .inputIcon i,
+    .outputIcon i {
+        line-height: 55px;
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .inputIcon i,
+    .outputIcon i {
+        line-height: 40px;
+        font-size: 20px;
+    }
+}
+
+.inputIcon i {
+    background-color: #f6cb27;
+    color: #de4242;
+}
+
+.outputIcon i {
+    background-color: #de4242;
+    color: #f6cb27;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+@media (min-width: 1500px) {
+    label {
+        font-size: 25px;
+        line-height: 25px;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+    label {
+        font-size: 35px;
+        line-height: 35px;
+    }
+}
+
+@media (max-width: 425px) {
+    label {
+        font-size: 20px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    label {
+        font-size: 15px;
+        line-height: 15px;
+    }
+}
+
+input.data {
+    border: 5px solid #f6cb27;
+}
+
+input.btn {
+    border: none;
+    background-color: #39b54a;
+    margin-top: 20px;
+    width: 70%;
+    font-weight: 700;
+    font-size: 25px;
+    color: #fff;
+}
+
+@media (min-width: 1500px) {
+    input.btn {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+    input.btn {
+        font-size: 45px;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    input.btn {
+        font-size: 40px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 425px) {
+    input.btn {
+        font-size: 35px;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    input.btn {
+        font-size: 25px;
+        margin-top: 5px;
+    }
+}
+
+input.result {
+    border: 5px solid #de4242;
+}
+
+h1 {
+    background-color: #de4242;
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 25px;
+    /* height: 45px; */
+    color: #fff;
+}
+
+@media (min-width: 1500px) {
+    h1 {
+        margin-bottom: 20px;
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+    h1 {
+        margin-bottom: 30px;
+        margin-top: 15vh;
+        padding: 15px;
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        margin-top: 70px
+    }
+}
+
+@media (max-width: 425px) {
+    h1 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 320px) {
+    h1 {
+        font-size: 25px;
+        padding: 5px;
+        margin-bottom: 15px;
+    }
+}

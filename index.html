@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strażnik oszczędzania</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/61f798cd11.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img class="logo" src="img/logo.png" alt="logo">
+        </div>
+    </header>
+    <section class="forms">
+        <div class="formInContainer">
+            <form action="">
+                <div class="inputIcon">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <input class="data" type="text" placeholder="wynagrodzenie">
+                </div>
+                <div class="inputIcon">
+                    <i class="fas fa-home"></i>
+                    <input class="data" type="text" placeholder="rachunki">
+                </div>
+                <div class="inputIcon">
+                    <i class="fas fa-drumstick-bite"></i>
+                    <input class="data" type="text" placeholder="jedzenie">
+                </div>
+                <div class="inputIcon">
+                    <i class="fas fa-pump-medical"></i>
+                    <inputclass="data" type="text" placeholder="inne">
+                </div>
+                <div class="inputIcon">
+                    <i class="fas fa-glass-cheers"></i>
+                    <input class="data" type="text" placeholder="przyjemności">
+                </div class="inputIcon">
+                <div class="inputIcon">
+                    <i class="fas fa-piggy-bank"></i>
+                    <input class="data" type="text" placeholder="ile chcesz zaoszczędzić">
+                </div>
+                <input class="data btn" type="submit" value="Gotowe">
+            </form>
+        </div>
+
+        <div class="formOutContainer">
+            <h1>Podsumowanie wydatków</h1>
+            <form action="">
+                <div class="outputIcon">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <input class="result" type="text" disabled>
+                </div>
+                <div class="outputIcon">
+                    <i class="fas fa-drumstick-bite"></i>
+                    <input class="result" type="text" disabled>
+                </div>
+                <div class="outputIcon">
+                    <i class="fas fa-pump-medical"></i>
+                    <input class="result" type="text" disabled>
+                </div>
+                <div class="outputIcon">
+                    <i class="fas fa-glass-cheers"></i>
+                    <input class="result" type="text" disabled>
+                </div>
+                <div class="outputIcon">
+                    <label for="money">Wydano:</label>
+                    <input class="result" type="text" id="money" disabled>
+                </div>
+                <div class="outputIcon">
+                    <label for="save">Aby zaoszczędzić, zrezygnuj z...</label>
+                    <input class="result" type="text" id="save" disabled>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
