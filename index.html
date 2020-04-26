@@ -1,27 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="myApp">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strażnik oszczędzania</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
     <script src="https://kit.fontawesome.com/61f798cd11.js" crossorigin="anonymous"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="main.js"></script>
 
 </head>
 
-<body>
+<body ng-controller="MainController as ctrl">
     <header>
         <div class="logo">
             <img class="logo" src="img/logo.png" alt="logo">
         </div>
     </header>
-    <section class="forms">
+
+    <div style="width:100%;text-align:center;margin-bottom:50px;">
+        <div style="display:inline-block;">
+            <button class="data btn" ng-click="ctrl.handleAuthClick()" ng-hide="ctrl.isSignedIn">LOGIN</button>
+            <button class="data btn" ng-click="ctrl.handleSignoutClick()" ng-show="ctrl.isSignedIn">LOGOUT</button>
+        </div>
+    </div>
+
+    <section class="forms" ng-show="ctrl.isSignedIn">
         <div class="formInContainer">
             <form action="">
                 <div class="inputIcon">
                     <i class="fas fa-hand-holding-usd"></i>
-                    <input class="data" type="text" placeholder="wynagrodzenie">
+                    <input class="data" type="text" placeholder="wynagrodzenie" ng-model="ctrl.formData.salary.value">
                 </div>
                 <div class="inputIcon">
                     <i class="fas fa-home"></i>
@@ -29,7 +40,7 @@
                 </div>
                 <div class="inputIcon">
                     <i class="fas fa-drumstick-bite"></i>
-                    <input class="data" type="text" placeholder="jedzenie">
+                    <input class="data" type="text" placeholder="jedzenie" ng-model="ctrl.formData.food.value">
                 </div>
                 <div class="inputIcon">
                     <i class="fas fa-pump-medical"></i>
@@ -38,12 +49,12 @@
                 <div class="inputIcon">
                     <i class="fas fa-glass-cheers"></i>
                     <input class="data" type="text" placeholder="przyjemności">
-                </div class="inputIcon">
+                </div>
                 <div class="inputIcon">
                     <i class="fas fa-piggy-bank"></i>
-                    <input class="data" type="text" placeholder="ile chcesz zaoszczędzić">
+                    <input class="data" type="text" placeholder="ile chcesz zaoszczędzić" ng-model="ctrl.formData.wantSave.value">
                 </div>
-                <input class="data btn" type="submit" value="Gotowe">
+                <button class="data btn" type="button" ng-click="ctrl.saveData()">Gotowe</button>
             </form>
         </div>
 
@@ -52,11 +63,11 @@
             <form action="">
                 <div class="outputIcon">
                     <i class="fas fa-home"></i>
-                    <input class="result" type="text" disabled>
+                    <input class="result" type="text" disabled ng-value="ctrl.initData.home.value">
                 </div>
                 <div class="outputIcon">
                     <i class="fas fa-drumstick-bite"></i>
-                    <input class="result" type="text" disabled>
+                    <input class="result" type="text" disabled ng-value="ctrl.initData.food.value">
                 </div>
                 <div class="outputIcon">
                     <i class="fas fa-pump-medical"></i>
@@ -68,7 +79,7 @@
                 </div>
                 <div class="outputIcon">
                     <label for="money">Wydano:</label>
-                    <input class="result" type="text" id="money" disabled>
+                    <input class="result" type="text" id="money" disabled ng-value="ctrl.initData.expensesSum.value">
                 </div>
                 <div class="outputIcon">
                     <label for="save">Aby zaoszczędzić, zrezygnuj z...</label>
