@@ -18,8 +18,7 @@ html {
 
 div.logo {
     text-align: center;
-    height: 30vh;
-    margin-bottom: 2vh;
+    height: 25vh;
 }
 
 @media (min-width: 1500px) {
@@ -42,7 +41,7 @@ div.logo {
 
 img.logo {
     height: 90%;
-    margin-top: 2.5vh;
+    margin-top: .5vh;
 }
 
 @media (max-width: 1024px) and (orientation: portrait) {
@@ -55,6 +54,61 @@ img.logo {
     img.logo {
         margin-top: 2.5vh;
     }
+}
+
+button {
+    border: none;
+    background-color: #39b54a;
+    font-weight: 700;
+    font-size: 25px;
+    color: #fff;
+    padding: .5vh 2.5vh;
+}
+button.ready {
+    margin-top: 8px;
+    width: 50%;
+}
+
+@media (min-width: 1500px) {
+    button.ready {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+    button.ready {
+        font-size: 45px;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    button.ready {
+        font-size: 40px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 425px) {
+    button.ready {
+        font-size: 35px;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    button.ready {
+        font-size: 25px;
+        margin-top: 5px;
+    }
+}
+div.containerBtn {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+div.btnLog {
+    display: inline-block;
 }
 
 section.forms {
@@ -251,49 +305,7 @@ input.data {
     border: 5px solid #f6cb27;
 }
 
-button.btn {
-    border: none;
-    background-color: #39b54a;
-    margin-top: 20px;
-    width: 70%;
-    font-weight: 700;
-    font-size: 25px;
-    color: #fff;
-}
 
-@media (min-width: 1500px) {
-    button.btn {
-        font-size: 35px;
-    }
-}
-
-@media (max-width: 1024px) and (orientation: portrait) {
-    button.btn {
-        font-size: 45px;
-        margin-top: 25px;
-    }
-}
-
-@media (max-width: 768px) {
-    button.btn {
-        font-size: 40px;
-        margin-top: 10px;
-    }
-}
-
-@media (max-width: 425px) {
-    button.btn {
-        font-size: 35px;
-        margin-top: 15px;
-    }
-}
-
-@media (max-width: 320px) {
-    button.btn {
-        font-size: 25px;
-        margin-top: 5px;
-    }
-}
 
 input.result {
     border: 5px solid #de4242;

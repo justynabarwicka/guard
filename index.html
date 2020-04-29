@@ -20,10 +20,10 @@
         </div>
     </header>
 
-    <div style="width:100%;text-align:center;margin-bottom:50px;">
-        <div style="display:inline-block;">
-            <button class="data btn" ng-click="ctrl.handleAuthClick()" ng-hide="ctrl.isSignedIn">LOGIN</button>
-            <button class="data btn" ng-click="ctrl.handleSignoutClick()" ng-show="ctrl.isSignedIn">LOGOUT</button>
+    <div class="containerBtn">
+        <div class="btnLog">
+            <button class="data btn log" ng-click="ctrl.handleAuthClick()" ng-hide="ctrl.isSignedIn">Login</button>
+            <button class="data btn log" ng-click="ctrl.handleSignoutClick()" ng-show="ctrl.isSignedIn">Logout</button>
         </div>
     </div>
 
@@ -52,9 +52,10 @@
                 </div>
                 <div class="inputIcon">
                     <i class="fas fa-piggy-bank"></i>
-                    <input class="data" type="text" placeholder="ile chcesz zaoszczędzić" ng-model="ctrl.formData.wantSave.value">
+                    <input class="data" type="text" placeholder="ile chcesz zaoszczędzić"
+                        ng-model="ctrl.formData.wantSave.value">
                 </div>
-                <button class="data btn" type="button" ng-click="ctrl.saveData()">Gotowe</button>
+                <button class="data btn ready" type="button" ng-click="ctrl.saveData()">Gotowe</button>
             </form>
         </div>
 
