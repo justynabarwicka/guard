@@ -251,7 +251,7 @@ input.data {
     border: 5px solid #f6cb27;
 }
 
-input.btn {
+button.btn {
     border: none;
     background-color: #39b54a;
     margin-top: 20px;
@@ -262,34 +262,34 @@ input.btn {
 }
 
 @media (min-width: 1500px) {
-    input.btn {
+    button.btn {
         font-size: 35px;
     }
 }
 
 @media (max-width: 1024px) and (orientation: portrait) {
-    input.btn {
+    button.btn {
         font-size: 45px;
         margin-top: 25px;
     }
 }
 
 @media (max-width: 768px) {
-    input.btn {
+    button.btn {
         font-size: 40px;
         margin-top: 10px;
     }
 }
 
 @media (max-width: 425px) {
-    input.btn {
+    button.btn {
         font-size: 35px;
         margin-top: 15px;
     }
 }
 
 @media (max-width: 320px) {
-    input.btn {
+    button.btn {
         font-size: 25px;
         margin-top: 5px;
     }

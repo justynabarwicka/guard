@@ -36,7 +36,7 @@
                 </div>
                 <div class="inputIcon">
                     <i class="fas fa-home"></i>
-                    <input class="data" type="text" placeholder="rachunki">
+                    <input class="data" type="text" placeholder="rachunki" ng-model="ctrl.formData.home.value">
                 </div>
                 <div class="inputIcon">
                     <i class="fas fa-drumstick-bite"></i>
@@ -44,11 +44,11 @@
                 </div>
                 <div class="inputIcon">
                     <i class="fas fa-pump-medical"></i>
-                    <input class="data" type="text" placeholder="inne">
+                    <input class="data" type="text" placeholder="inne" ng-model="ctrl.formData.other.value">
                 </div>
                 <div class="inputIcon">
                     <i class="fas fa-glass-cheers"></i>
-                    <input class="data" type="text" placeholder="przyjemności">
+                    <input class="data" type="text" placeholder="przyjemności" ng-model="ctrl.formData.fun.value">
                 </div>
                 <div class="inputIcon">
                     <i class="fas fa-piggy-bank"></i>
@@ -71,11 +71,11 @@
                 </div>
                 <div class="outputIcon">
                     <i class="fas fa-pump-medical"></i>
-                    <input class="result" type="text" disabled>
+                    <input class="result" type="text" disabled ng-value="ctrl.initData.other.value">
                 </div>
                 <div class="outputIcon">
                     <i class="fas fa-glass-cheers"></i>
-                    <input class="result" type="text" disabled>
+                    <input class="result" type="text" disabled ng-value="ctrl.initData.fun.value">
                 </div>
                 <div class="outputIcon">
                     <label for="money">Wydano:</label>
