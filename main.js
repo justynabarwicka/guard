@@ -11,7 +11,8 @@ angular.module("myApp", []).controller("MainController", ["$scope", "$timeout", 
         home: {col:1, row:13, value: 0},
         other: {col:3, row:60, value:0},
         fun: {col:4, row:60, value:0},
-        expensesSum: {col:6, row:1, value:0}
+        expensesSum: {col:6, row:1, value:0},
+        saved: {col:6, row:11, value:0}
     };
 
     vm.formData = {
@@ -21,8 +22,11 @@ angular.module("myApp", []).controller("MainController", ["$scope", "$timeout", 
         home: {colId:1, colName:"B", address:"", value: null},
         other: {colId:3, colName:"D", address:"", value: null},
         fun: {colId:4, colName:"E", address:"", value: null},
-        expensesSum: {colId:6, colName:"G", address:"", value: null}
+        expensesSum: {colId:6, colName:"G", address:"", value: null},
+        saved: {colId:6, colName:"G", address:"", value: null},
     };
+
+    
 
     const CLIENT_ID = "1065006613256-kq5d6m2ki006in7jgnatp1pr7b6fqejs.apps.googleusercontent.com",
         API_KEY = "AIzaSyCik-Ie_P1Xc8tFsotMZRWBmM4RVSloums",
