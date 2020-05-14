@@ -26,8 +26,6 @@ angular.module("myApp", []).controller("MainController", ["$scope", "$timeout", 
         saved: {colId:6, colName:"G", address:"", value: null},
     };
 
-    
-
     const CLIENT_ID = "1065006613256-kq5d6m2ki006in7jgnatp1pr7b6fqejs.apps.googleusercontent.com",
         API_KEY = "AIzaSyCik-Ie_P1Xc8tFsotMZRWBmM4RVSloums",
         SPREADSHEETID = "1iRU0TSHetWU4dydr1WU63SWu-q9TB7rvAyniboSaOno",
@@ -89,6 +87,9 @@ angular.module("myApp", []).controller("MainController", ["$scope", "$timeout", 
             console.log(response.result.values);
             mapToModel(response.result.values);
             setNextFreeCellAddress(response.result.values);
+
+            randomizeTip();
+
         }, function(response) {
             console.error("Error: " + response.result.error.message);
         });
@@ -143,9 +144,28 @@ angular.module("myApp", []).controller("MainController", ["$scope", "$timeout", 
         Object.keys(vm.formData).forEach(function(key) {
             if (vm.formData[key].value) {
                 console.log(vm.formData[key].value);
-                addDataInRange({values: [[vm.formData[key].value]]}, vm.formData[key].address)
+                addDataInRange({values: [[vm.formData[key].value]]}, vm.formData[key].address);
+
+                kay !== 'wantSave' ? vm.formData[kay].value = null : null;
             }
         });
     }
 
+    function randomizeTip() {
+
+        $scope.$apply(function() {
+
+            if (parseFloat(vm.initData.salary.value) < parseFloat(vm.initData.expensesSum.value) + parseFloat(vm.initData.wantSave.value)) {
+                vm.initData.saved.value = "Budżet mocno przekroczony!!!";
+
+               return;
+            
+            }
+
+            vm.initData.saved.row = Math.floor(Math.random() * (11 - 4 + 1)) + 4
+
+        });
+    }
+
 }]);
+
