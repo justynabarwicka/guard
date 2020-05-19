@@ -146,7 +146,7 @@ angular.module("myApp", []).controller("MainController", ["$scope", "$timeout", 
                 console.log(vm.formData[key].value);
                 addDataInRange({values: [[vm.formData[key].value]]}, vm.formData[key].address);
 
-                kay !== 'wantSave' ? vm.formData[kay].value = null : null;
+                key !== 'wantSave' ? vm.formData[key].value = null : null;
             }
         });
     }
